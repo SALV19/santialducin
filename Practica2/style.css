@@ -1,0 +1,55 @@
+img {
+  height: 15rem;
+  width: 10rem;
+  margin-bottom: 3rem;
+}
+main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+p {
+  margin: 0 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 2rem;
+  background-image: url("imgs/marco.png");
+  padding: 3.3rem 3rem;
+  background-repeat: no-repeat;
+  background-size: 250px 350px;
+  font-size: 25px;
+}
+hr {
+  width: 5rem;
+  height: 0;
+  border: solid black 2px;
+}
+
+.couple {
+  margin: 0 5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.logo,
+.tree {
+  height: 10rem;
+}
+
+.tree {
+  position: relative;
+  left: 0.4rem;
+  top: 1.6rem;
+  z-index: -10;
+}
+
+.parents {
+  display: flex;
+  align-items: center;
+}
