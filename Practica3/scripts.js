@@ -28,22 +28,45 @@ function change23D () {
   }
 }
 
+function next_img_fn() {
+  img_shown = (img_shown + 1) % img_gallery.length;
+  img.src = img_gallery[img_shown];
+  console.log(img_shown);
+}
+function prev_img_fn() {
+  img_shown = (img_shown - 1 + img_gallery.length) % 5;
+  img.src = img_gallery[img_shown];
+  console.log(img_shown);
+  // console.log(img_gallery.length);
+}
+
 const bg = document.querySelector("body");
 const dm_btn = document.querySelector("#dark-mode-btn");
 let bg_shown = 1;
 let D23_img_shown = 1;
 
 const dark_mode = document.querySelector("#dark-mode");
-dark_mode.addEventListener('click', change_darkMode);
 
 const D2 = document.querySelector("#D2_img");
 const btn_D2 = document.querySelector("#D23");
+
+const next_img = document.querySelector('#btn-next');
+const prev_img = document.querySelector("#btn-prev");
+const img = document.querySelector("#gallery");
+let img_shown = 0;
+
+
+dark_mode.addEventListener('click', change_darkMode);
 btn_D2.addEventListener('click', change23D);
+next_img.addEventListener('click', next_img_fn);
+prev_img.addEventListener('click', prev_img_fn);
+
 
 const img_gallery = [
   "./imgs/ds.jpg",
   "./imgs/skyrim.avif",
   "./imgs/witcher.jpg",
-  "./imgs/sh.jpg",
+  "./imgs/sh.avif",
+  "./imgs/dark_s.jpg",
 ]
 
